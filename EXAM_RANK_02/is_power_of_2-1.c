@@ -6,7 +6,7 @@
 /*   By: duzun <davut@uzun.ist>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 15:53:22 by duzun             #+#    #+#             */
-/*   Updated: 2022/12/25 15:53:52 by duzun            ###   ########.fr       */
+/*   Updated: 2022/12/25 22:53:29 by duzun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	is_power_of_2(unsigned int n)
 
 	// İkinci Çözüm Yöntemi:
 	// Bit manipulasyonu yöntemi ile yapma (sadece 2 en küvvetlerinde geçerli):
-	return (n & (n - 1) == 0);
+	return ((n & (n - 1)) == 0);
 	// 1: 0001
 	// 2: 0010
 	// 4: 0100
