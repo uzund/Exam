@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range2.c                                        :+:      :+:    :+:   */
+/*   ft_rrange2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: duzun <davut@uzun.ist>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 12:08:47 by duzun             #+#    #+#             */
-/*   Updated: 2023/01/09 12:42:01 by duzun            ###   ########.fr       */
+/*   Updated: 2023/01/09 12:41:39 by duzun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int	*ft_range(int start, int end)
+int	*ft_rrange(int start, int end)
 {
 	int		*range;
 	int		len;
@@ -31,13 +31,13 @@ int	*ft_range(int start, int end)
 	{
 		if (start >= end)
 		{
-			range[i] = start;
+			range[len - i] = start;
 			start--;
 			i++;
 		}
 		else if (start <= end)
 		{
-			range[i] = start;
+			range[len - i] = start;
 			start++;
 			i++;
 		}
@@ -58,7 +58,7 @@ int	main(void)
 	len = start - end;
 	if (len < 0)
 		len *= -1;
-	range = ft_range(start, end);
+	range = ft_rrange(start, end);
 	i = 0;
 	while (i <= len)
 	{
